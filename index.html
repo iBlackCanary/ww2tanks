@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WWII Tanks</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('ussr')">USSR</a>
+    <a href="#" onclick="showSection('germany')">German</a>
+    <a href="#" onclick="showSection('usa')">US</a>
+  </nav>
+  <main>
+    <section id="home" class="active">
+      <h1>World War II Tanks</h1>
+      <p>This was their finest hour. Never in history have so many tanks and AFV’s been built and fought all around the globe. From the snowy steppes of Russia to the soaky jungles of New Guinea, from the sands of Egypt to the grassy plains of Western Europe, the tanks were wherever soldiers were to be seen. They fought in most battles of the Second World War, some of these have become legendary like Kursk, one of the largest armored clashes in the history of mankind. Some new tactics were developed during the interwar and refined, such as the “Blitzkrieg” which proved decisive and changed the way tanks would be used thereafter.</p>
+      <img src="images/battlefield.jpg" alt="Battle of Kursk scene">
+
+      <h2>Comparison Table</h2>
+<p>Here is a comparison of some tank characteristics. But even though one might have superior specs, victory often went not to the strongest, but to those who believed harder and understood better what it takes to win.</p>
+<table>
+  <tr>
+    <th>Tank</th>
+    <th>Nation</th>
+    <th>Armor (mm)</th>
+    <th>Main Gun</th>
+    <th>Speed (km/h)</th>
+    <th>Weight (tons)</th>
+    <th>Crew</th>
+    <th>Production</th>
+  </tr>
+  <tr>
+    <td>T-34</td>
+    <td>USSR</td>
+    <td>45</td>
+    <td>76.2mm</td>
+    <td>55</td>
+    <td>26.5</td>
+    <td>4</td>
+    <td>80,000</td>
+  </tr>
+  <tr>
+    <td>Tiger I</td>
+    <td>Germany</td>
+    <td>100</td>
+    <td>88mm</td>
+    <td>40</td>
+    <td>57</td>
+    <td>5</td>
+    <td>1,347</td>
+  </tr>
+  <tr>
+    <td>Sherman</td>
+    <td>USA</td>
+    <td>76</td>
+    <td>75mm</td>
+    <td>48</td>
+    <td>30</td>
+    <td>5</td>
+    <td>49,000</td>
+  </tr>
+</table>
+
+<h2>Choose a Tank</h2>
+<label for="tankSelect" style="display:block; font-weight: bold; margin: 1em 0 0.5em; font-size: 1.2em;">Select a tank to learn a random fact:</label>
+<select id="tankSelect" style="width: 60%; padding: 1em; font-size: 1em; margin-bottom: 1em;">
+  <option>T-34</option>
+  <option>Tiger I</option>
+  <option>Sherman</option>
+</select>
+
+<br>
+<button onclick="showRandomFact()" style="padding: 0.75em 1.5em; font-size: 1em; cursor: pointer;">Show Random Fact</button>
+<p id="factOutput" style="margin-top: 1.5em; font-size: 1.1em; font-style: italic;"></p>
+  </section>
+
+    <section id="ussr">
+      <h2>USSR Tanks</h2>
+      <div class="tank"><strong>T-34</strong><br><img src="images/t34.jpg" alt="T-34"><p>The T-34 is a Soviet medium tank developed in the late 1930s and became one of the key armored vehicles of the USSR during the Great Patriotic War. 
+    First used in combat in 1941, the T-34 was distinguished by its successful combination of mobility, firepower and protection. 
+    The sloping hull armor and powerful 76.2 mm (later 85 mm) caliber cannon provided it with significant advantages over most German tanks at an early stage of the war. 
+    The production of the T-34 was organized on a large scale, which allowed the Soviet Union to quickly replenish losses and saturate the front with military equipment. 
+    By 1945, more than 57,000 units had been produced. 
+    The T-34 had a significant impact on the development of tank construction in the world and is considered one of the most effective tanks of the Second World War.</p></div>
+      <div class="tank"><strong>KV-1</strong><br><img src="images/kv1.jpg" alt="KV-1"><p>The KV-1 (Klim Voroshilov-1) is a heavy tank of the Red Army, which entered service in 1939. 
+        It featured powerful armor (up to 75 mm in early versions) and armament in the form of a 76.2 mm cannon. 
+        At the initial stage of the Great Patriotic War, the KV-1 was practically invulnerable to most enemy anti-tank weapons, which made it a valuable element of defense. 
+        However, low speed, overloaded transmission and limited maneuverability reduced its combat effectiveness in dynamic conditions. 
+        Since 1942, it has gradually begun to give way to more advanced models.</p></div>
+      <div class="tank"><strong>IS-2</strong><br><img src="images/is2.jpg" alt="IS-2"><p>The IS-2 (Joseph Stalin-2) is a Soviet heavy tank developed in 1943 as a response to the appearance of heavy tanks such as the Tiger. 
+        The main armament of the IS-2 was a 122 mm cannon capable of hitting enemy fortifications and armored vehicles at long distances. 
+        The frontal armor reached 120 mm, which provided high protection from most enemy shells. 
+        The IS-2 was actively used in the assault operations of 1944-1945, especially during the breakthrough of fortified lines. 
+        He became a symbol of the power of the Soviet tank forces at the final stage of the war.</p></div>
+    </section>
+
+    <section id="germany">
+      <h2>German Tanks</h2>
+      <div class="tank"><strong>Tiger I</strong><br><img src="images/tiger1.jpg" alt="Tiger I"><p>Tiger I is a heavy tank of the Wehrmacht, which entered service in 1942. 
+        It was distinguished by powerful frontal armor (up to 100 mm) and effective armament — the 88-mm KwK 36 cannon, capable of hitting most Allied tanks at long distances. 
+        The Tiger I was difficult and expensive to manufacture, characterized by low reliability and high fuel consumption. 
+        In total, about 1,350 units were produced. 
+        It was used in limited quantities, but had a significant psychological and tactical impact.</p></div>
+      <div class="tank"><strong>Panther</strong><br><img src="images/panther.jpg" alt="Panther"><p>The Panther is a medium tank adopted in 1943 as a response to the Soviet T-34. 
+        It combined high firepower (KwK 42 L/70 75 mm cannon), sloping armor and good maneuverability. 
+        At the same time, it maintained a relatively high speed for its mass. 
+        The Panther has the best performance balance among German tanks, but suffered from technical problems in the early series. 
+        In total, about 6,000 units were produced. 
+        It was used on all fronts until the end of the war.</p></div>
+      <div class="tank"><strong>Pz. IV</strong><br><img src="images/pz4.jpg" alt="Panzer IV"><p>The Panzer IV is one of the most massive tanks in Nazi Germany, produced from 1937 to 1945. 
+        It was originally designed as a fire support tank with a 75 mm short-barreled cannon, but was repeatedly upgraded during the war. 
+        Later modifications received the KwK 40 long-barreled cannon, reinforced armor and shields against cumulative ammunition. 
+        It was a universal medium tank that formed the basis of the Wehrmacht tank units. 
+        In total, more than 8,500 units were produced.</p></div>
+    </section>
+
+    <section id="usa">
+      <h2>USA Tanks</h2>
+      <div class="tank"><strong>Sherman</strong><br><img src="images/sherman.jpg" alt="M4 Sherman"><p>The M4 Sherman was the main medium tank of the US Army in World War II, mass—produced since 1942. 
+        It was characterized by reliability, simple design and high maintainability. 
+        It was armed with a 75-mm or 76-mm cannon, later versions also with a 105—mm howitzer. 
+        The main advantage was the mass production: over 49 thousand units were produced. 
+        It was inferior in armor and firepower to German heavy tanks, but it compensated for this with numbers, mobility and efficient logistics.</p></div>
+      <div class="tank"><strong>Hellcat</strong><br><img src="images/hellcat.jpg" alt="M18 Hellcat"><p>The M18 Hellcat is an American self—propelled anti-tank launcher developed in 1943. 
+        The fastest armored vehicle of the Second World War: maximum speed — up to 90 km/ h. 
+        It is armed with a 76 mm cannon, effective against most German medium tanks. 
+        It was poorly armored, but highly mobile and was well suited for ambushes and maneuverable battles. 
+        It has been used in Europe since 1944, having proven its effectiveness in raids and defense.</p></div>
+      <div class="tank"><strong>Pershing</strong><br><img src="images/pershing.jpg" alt="M26 Pershing"><p>The M26 Pershing is a heavy (according to the American classification) tank that arrived in limited quantities in Europe in 1945. 
+        He was armed with a 90mm cannon that could fight Tigers and Panthers on equal terms. 
+        The armor and armament corresponded to the level of the late war, but the tank arrived too late to have a serious impact on the course of the fighting. 
+        It was a transitional link between the medium tanks of the war and the post-war main battle tanks.</p></div>
+    </section>
+  </main>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("main section").forEach(section => {
+        section.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
